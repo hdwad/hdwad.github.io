@@ -1,19 +1,98 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена</title>
     <style>
-        .doesnt-exist-lbl {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .container {
             text-align: center;
-            font-size: 50px;
+            padding: 2rem;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #5a5a5a;
+        }
+        
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .home-link:hover {
+            background-color: #2980b9;
+        }
+        
+        .illustration {
+            max-width: 250px;
+            margin: 20px auto;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>
-
 <body>
-    <div class="doesnt-exist-lbl">Идиот! Такой страницы не существует.</div>
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <div class="illustration floating">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#e74c3c" d="M40,60 C40,37.90861 57.90861,20 80,20 C102.09139,20 120,37.90861 120,60 C120,82.09139 102.09139,100 80,100 C57.90861,100 40,82.09139 40,60 Z"></path>
+                <path fill="#3498db" d="M85,160 L85,100 L115,100 L115,160 L85,160 Z"></path>
+                <circle cx="100" cy="60" r="7" fill="white"></circle>
+                <circle cx="60" cy="60" r="7" fill="white"></circle>
+                <path d="M60,80 C60,80 80,95 100,80" stroke="white" stroke-width="3" fill="none"></path>
+            </svg>
+        </div>
+        <h2 class="error-message">Упс! Страница не найдена</h2>
+        <p>Запрашиваемая вами страница не существует или была перемещена.</p>
+        <a href="/" class="home-link">Вернуться на главную</a>
+    </div>
 </body>
-
 </html>
